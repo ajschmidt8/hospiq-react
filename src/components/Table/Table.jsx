@@ -35,8 +35,8 @@ export default function TableComponent() {
   const sortUnits = () => {
     const sortOrder =
       order === 'desc'
-        ? (a, b) => sortFunc(a, b, orderBy)
-        : (a, b) => -sortFunc(a, b, orderBy);
+        ? (a, b) => -sortFunc(a, b, orderBy)
+        : (a, b) => sortFunc(a, b, orderBy);
     return units.sort(sortOrder);
   };
   const handleSortClick = rowId => {
