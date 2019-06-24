@@ -2,7 +2,7 @@ import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
-import Table from '../table/table';
+import Table from '../Table/table';
 
 export default function AppComponent() {
   return (
