@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/index.jsx',
   output: {
-    filename: 'main.js',
+    filename: '[name].[hash].js',
     path: resolve(__dirname, 'dist'),
     publicPath: '/'
   },
@@ -22,7 +22,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/index.html',
+      minify: true
     })
   ]
 };

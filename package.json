@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
     "build": "webpack --config webpack.prod.js",
+    "prestart": "npm run clean",
     "start": "webpack-dev-server --config webpack.dev.js --hot"
   },
   "keywords": [],
@@ -22,7 +25,7 @@
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^4.0.0-beta.5",
     "webpack": "^4.35.0",
     "webpack-cli": "^3.3.5",
     "webpack-dev-server": "^3.7.2",
